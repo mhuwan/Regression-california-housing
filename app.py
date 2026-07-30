@@ -363,5 +363,4 @@ if predict_button:
 
 # ==================== Footer ====================
 st.markdown("---")
-# เอาชื่อเครดิต tpp72 ออก และเหลือไว้เพียงเครดิตกลางๆ หรือลบออกทั้งหมดได้เลย 
 st.markdown("<p style='text-align:center;color:#5a6b8c;margin-top:30px;'>California Housing Predictor · Machine Learning Application</p>", unsafe_allow_html=True)
