@@ -33,18 +33,18 @@ st.markdown("""
         text-align: center;
         padding: 2rem 1.5rem 1.5rem 1.5rem;
         border-radius: 22px;
-        border: 1px solid rgba(239, 108, 0, 0.28);
-        background:
-            radial-gradient(circle at top left, rgba(255, 179, 0, 0.22), transparent 55%),
-            linear-gradient(135deg, rgba(239, 108, 0, 0.16), rgba(255, 179, 0, 0.10));
-        box-shadow: 0 10px 30px rgba(239, 108, 0, 0.12);
+        border: 1px solid rgba(25, 118, 210, 0.28);
+        background: 
+            radial-gradient(circle at top left, rgba(100, 181, 246, 0.22), transparent 55%),
+            linear-gradient(135deg, rgba(25, 118, 210, 0.16), rgba(100, 181, 246, 0.10));
+        box-shadow: 0 10px 30px rgba(25, 118, 210, 0.12);
     }
     .hero h1 {
         font-size: 2.8rem;
         font-weight: 800;
         margin-bottom: 0.3rem;
         letter-spacing: -0.5px;
-        background: linear-gradient(90deg, #ef6c00, #ffb300);
+        background: linear-gradient(90deg, #1976D2, #42A5F5);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
@@ -60,7 +60,7 @@ st.markdown("""
         margin-top: 0.8rem;
         padding: 0.35rem 1rem;
         border-radius: 999px;
-        background: linear-gradient(90deg, #ef6c00, #e65100);
+        background: linear-gradient(90deg, #1976D2, #0D47A1);
         color: white;
         font-size: 0.85rem;
         font-weight: 600;
@@ -82,15 +82,15 @@ st.markdown("""
         border: none;
         border-radius: 3px;
         margin: 1.5rem 0;
-        background: linear-gradient(90deg, transparent, #ef6c00, #ffb300, transparent);
+        background: linear-gradient(90deg, transparent, #1976D2, #64B5F6, transparent);
     }
 
     /* Input group card */
     .input-card {
         border-radius: 16px;
         padding: 1.4rem 1.6rem 0.6rem 1.6rem;
-        border: 1px solid rgba(239, 108, 0, 0.25);
-        background: rgba(255, 179, 0, 0.04);
+        border: 1px solid rgba(25, 118, 210, 0.25);
+        background: rgba(100, 181, 246, 0.04);
         margin-bottom: 1rem;
     }
 
@@ -98,15 +98,15 @@ st.markdown("""
     .metric-card {
         padding: 1.4rem 1rem;
         border-radius: 14px;
-        border: 1px solid rgba(239, 108, 0, 0.22);
-        background: rgba(255, 179, 0, 0.05);
+        border: 1px solid rgba(25, 118, 210, 0.22);
+        background: rgba(100, 181, 246, 0.05);
         text-align: center;
         transition: transform 0.25s ease, box-shadow 0.25s ease;
         height: 100%;
     }
     .metric-card:hover {
         transform: translateY(-6px);
-        box-shadow: 0 10px 25px rgba(239, 108, 0, 0.18);
+        box-shadow: 0 10px 25px rgba(25, 118, 210, 0.18);
     }
     .metric-icon {
         font-size: 1.6rem;
@@ -128,12 +128,12 @@ st.markdown("""
 
     /* Result card */
     .result-card {
-        background: linear-gradient(135deg, #ef6c00 0%, #ffb300 100%);
+        background: linear-gradient(135deg, #1976D2 0%, #42A5F5 100%);
         padding: 2.2rem 1.5rem;
         border-radius: 20px;
         color: white;
         text-align: center;
-        box-shadow: 0 12px 35px rgba(239, 108, 0, 0.3);
+        box-shadow: 0 12px 35px rgba(25, 118, 210, 0.3);
     }
     .result-card h2 {
         margin: 0;
@@ -155,7 +155,7 @@ st.markdown("""
 
     /* Button styling */
     .stButton > button {
-        background: linear-gradient(90deg, #ef6c00, #e65100);
+        background: linear-gradient(90deg, #1976D2, #0D47A1);
         color: white;
         border: none;
         padding: 0.7rem 2rem;
@@ -167,7 +167,7 @@ st.markdown("""
     }
     .stButton > button:hover {
         transform: translateY(-2px) scale(1.02);
-        box-shadow: 0 10px 25px rgba(239, 108, 0, 0.3);
+        box-shadow: 0 10px 25px rgba(25, 118, 210, 0.3);
     }
 </style>
 """, unsafe_allow_html=True)
@@ -337,7 +337,8 @@ if predict_button:
             y='Feature',
             orientation='h',
             color='Importance',
-            color_continuous_scale=['#e65100', '#ef6c00', '#ffb300'],
+            # ปรับแต่งโทนสีกราฟเป็นสีฟ้า
+            color_continuous_scale=['#BBDEFB', '#64B5F6', '#1976D2'],
             title='🔍 ความสำคัญของ Features ในการทำนาย'
         )
         fig.update_layout(
@@ -362,5 +363,5 @@ if predict_button:
 
 # ==================== Footer ====================
 st.markdown("---")
-st.markdown("<p style='text-align:center;color:#5a6b8c;margin-top:30px;'>Made with Streamlit · Machine Learning Projects</p>", unsafe_allow_html=True)
-st.markdown("<p style='text-align:center;color:#5a6b8c;margin-top:4px;'>Develop By tpp72</p>", unsafe_allow_html=True)
+# เอาชื่อเครดิต tpp72 ออก และเหลือไว้เพียงเครดิตกลางๆ หรือลบออกทั้งหมดได้เลย 
+st.markdown("<p style='text-align:center;color:#5a6b8c;margin-top:30px;'>California Housing Predictor · Machine Learning Application</p>", unsafe_allow_html=True)
